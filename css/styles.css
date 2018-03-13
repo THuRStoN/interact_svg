@@ -19,16 +19,19 @@
 	left: 0;
 } */
 .svg-content { 
-	/* display: inline-block;
-	position: absolute;
-	top: 0;
-  left: 0; */
   display: block;
   margin-right:auto;
   margin-left:auto;
 
 }
 
+.center {
+  text-align: center;
+}
+
+g:hover use:first-child {
+  fill:red; stroke:blue;
+}
 
 /* Typography */
 
@@ -148,7 +151,7 @@ h1 {
 }
 
 .example-1 .wrapper {
-  background: url(http://res.cloudinary.com/thedailybeast/image/upload/v1492110403/articles/2016/08/12/whose-gold-medal-is-worth-the-most/160811-glasser-olympic-medal-tease_mvemzf.jpg) center/cover no-repeat;
+  background: url(../assets/jaguar_2018.jpg) center/cover no-repeat;
 }
 .example-1 .date {
   position: absolute;
