@@ -7,10 +7,25 @@ function reset_all_trophies_state() {
   var svg_doc = get_svg_doc( 'svg_obj' );
 
   for ( var i = 0; i < 15; i++ ) {
-    t_id = 'trophy_' + i;
+    // t_id = 'trophy_' + i;
     trophy = svg_doc.getElementById( 'trophy_' + i );
     if ( trophy ) {
       trophy.style.fill = '9B9B9B'; // hide
+    }
+  }
+}
+
+function reset_all_paths_states() {
+  var svg_doc = get_svg_doc( 'svg_obj' );
+  var line_ext = null;
+  var line_int = null;
+  
+  for ( var i = 0; i < 15 ; ++i ) {
+    line_ext = svg_doc.getElementById( 'line_ext_' + i ); 
+    line_int = svg_doc.getElementById( 'line_int_' + i );
+    if ( line_ext && line_int ) {
+      line_ext.style.fill = '9B9B9B';
+      line_int.style.fill = 'CBC7CC';
     }
   }
 }
@@ -22,7 +37,8 @@ function reset_all_trophies_state() {
 function set_active_trophy( active_index ) {
   var svg_doc = get_svg_doc( 'svg_obj' );
   var trophy = svg_doc.getElementById( 'trophy_' + active_index );
-  var line = null;
+  var line_ext = null;
+  var line_int = null;
 
   if ( !trophy ) { 
     return; // no trophy we move out of here! 
@@ -30,9 +46,11 @@ function set_active_trophy( active_index ) {
   trophy.style.fill = '3271BF';
 
   for ( var i = 0; i <= active_index; i++ ) {
-    line = svg_doc.getElementById( 'line_' + i ); 
-    if ( line ) {
-      // line.style.fill
+    line_ext = svg_doc.getElementById( 'line_ext_' + i ); 
+    line_int = svg_doc.getElementById( 'line_int_' + i );
+    if ( line_ext && line_int ) {
+      line_ext.style.fill = 'lime';
+      line_int.style.fill = 'lime';
     }
   }
 }
