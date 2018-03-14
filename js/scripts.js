@@ -36,23 +36,28 @@ function reset_all_paths_states() {
  */
 function set_active_trophy( active_index ) {
   var svg_doc = get_svg_doc( 'svg_obj' );
-  var trophy = svg_doc.getElementById( 'trophy_' + active_index );
+  var trophy = null;
   var line_ext = null;
   var line_int = null;
-
+  
+  for ( var i = 0; i <= active_index; i++ ) {
+    trophy = svg_doc.getElementById( 'trophy_' + i );
+    line_ext = svg_doc.getElementById( 'line_ext_' + i ); 
+    line_int = svg_doc.getElementById( 'line_int_' + i );
+    if ( trophy && line_ext && line_int ) {
+      trophy.style.fill = 'FBD5A3';
+      line_ext.style.fill = 'EE9D34';
+      line_int.style.fill = 'FEAD43';
+    }
+  }
+  
+  // active one!
+  trophy = svg_doc.getElementById( 'trophy_' + active_index );
   if ( !trophy ) { 
     return; // no trophy we move out of here! 
   }
   trophy.style.fill = '3271BF';
 
-  for ( var i = 0; i <= active_index; i++ ) {
-    line_ext = svg_doc.getElementById( 'line_ext_' + i ); 
-    line_int = svg_doc.getElementById( 'line_int_' + i );
-    if ( line_ext && line_int ) {
-      line_ext.style.fill = 'lime';
-      line_int.style.fill = 'lime';
-    }
-  }
 }
 
 function hide_all_panels() {
@@ -98,8 +103,14 @@ document.onreadystatechange = function () {
     trophy_range.onchange = function () {
       console.log( trophy_range.value ); // value change
       reset_all_trophies_state();
+      reset_all_paths_states();
       set_active_trophy( trophy_range.value );
     };
+    
+    // default trophy
+    set_active_trophy( trophy_range.value );
+    
+    // add trophies click event -> show price description panel
     add_click_event();
   }
 }
