@@ -11,13 +11,6 @@
   Note that the width used in the CSS assumes that you want the SVG image to be the full width of the page (or at least its parent container). The padding-bottom amount represents a ratio between the SVG illustration’s height and width. Dividing the height of the document’s viewBox by its width gives a 1:1 ratio in this case, meaning padding-bottom should be set to 100%. 
   If the SVG image was wider than it was tall, say 1:2, the padding-bottom would be set to 50%. 
 */
-
-/* .svg-content { 
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-} */
 .svg-content { 
   display: block;
   margin-right:auto;
