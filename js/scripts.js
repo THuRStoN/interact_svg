@@ -108,17 +108,35 @@ document.onreadystatechange = function () {
     // default trophy
     set_active_trophy( trophy_range.value );
 
-    // anime( {
-    //   targets: ['#Shape', 'div', 'h1' ],
-    //   translateX: [
-    //     { value: 100, duration: 1200 },
-    //     { value: 0, duration: 800 }
-    //   ],
-    //   rotate: '1turn',
-    //   backgroundColor: '#FFF',
-    //   duration: 2000,
-    //   loop: false
-    // } );
+    anime( {
+      // targets: ['#Shape'/*, 'div', 'h1' */],
+      targets: [ 
+                'trophy_0', 
+                'trophy_1', 
+                'trophy_2', 
+                'trophy_3', 
+                'trophy_4', 
+                'trophy_5', 
+                'trophy_6', 
+                'trophy_7', 
+                'trophy_8', 
+                'trophy_9', 
+                'trophy_10', 
+                'trophy_11', 
+                'trophy_12', 
+                'trophy_13', 
+                'trophy_14', 
+                'trophy_15', 
+               ]
+      translateX: [
+        { value: 100, duration: 1200 },
+        { value: 0, duration: 800 }
+      ],
+      rotate: '1turn',
+      backgroundColor: '#FFF',
+      duration: 2000,
+      loop: false
+    } );
     
     
     // add trophies click event -> show price description panel
