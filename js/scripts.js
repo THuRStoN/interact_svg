@@ -24,7 +24,8 @@ function reset_all_paths_states() {
     line_ext = svg_doc.getElementById( 'line_ext_' + i ); 
     line_int = svg_doc.getElementById( 'line_int_' + i );
     if ( line_ext && line_int ) {
-      line_ext.setAttribute( 'fill', '#9B9B9B' );
+      // line_ext.setAttribute( 'fill', '#9B9B9B' );
+      line_ext.setAttribute( 'fill', '#CBC7CC' );
       line_int.setAttribute( 'fill', '#CBC7CC' );
     }
   }
@@ -47,7 +48,8 @@ function set_active_trophy( active_index ) {
     if ( trophy && line_ext && line_int ) {
       // for FF & IE
       trophy.setAttribute( 'fill', '#FBD5A3' );
-      line_ext.setAttribute( 'fill', '#EE9D34' );
+      // line_ext.setAttribute( 'fill', '#EE9D34' );
+      line_ext.setAttribute( 'fill', '#FEAD43' );
       line_int.setAttribute( 'fill', '#FEAD43' );
     }
   }
@@ -109,25 +111,25 @@ document.onreadystatechange = function () {
     set_active_trophy( trophy_range.value );
 
     anime( {
-      // targets: ['#Shape'/*, 'div', 'h1' */],
       targets: [ 
-                'trophy_0', 
-                'trophy_1', 
-                'trophy_2', 
-                'trophy_3', 
-                'trophy_4', 
-                'trophy_5', 
-                'trophy_6', 
-                'trophy_7', 
-                'trophy_8', 
-                'trophy_9', 
-                'trophy_10', 
-                'trophy_11', 
-                'trophy_12', 
-                'trophy_13', 
-                'trophy_14', 
-                'trophy_15', 
-               ]
+                'g#trophy_0', 
+                'g#trophy_1', 
+                'g#trophy_2', 
+                'g#trophy_3', 
+                'g#trophy_4', 
+                'g#trophy_5', 
+                'g#trophy_6', 
+                'g#trophy_7', 
+                'g#trophy_8', 
+                'g#trophy_9', 
+                'g#trophy_10', 
+                'g#trophy_11', 
+                'g#trophy_12', 
+                'g#trophy_13', 
+                'g#trophy_14', 
+                'g#trophy_15',
+                'h1' 
+               ],
       translateX: [
         { value: 100, duration: 1200 },
         { value: 0, duration: 800 }
