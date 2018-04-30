@@ -4,6 +4,46 @@
     <title>trophies</title>
     <desc>Created with Sketch.</desc>
     <defs>
+        <style>
+            #trophy_0, 
+            #trophy_1, 
+            #trophy_2, 
+            #trophy_3, 
+            #trophy_4, 
+            #trophy_5, 
+            #trophy_6, 
+            #trophy_7, 
+            #trophy_8, 
+            #trophy_9, 
+            #trophy_10, 
+            #trophy_11, 
+            #trophy_12, 
+            #trophy_13, 
+            #trophy_14, 
+            #trophy_15 {
+                opacity:0.8;
+            }
+
+            #trophy_0:hover, 
+            #trophy_1:hover, 
+            #trophy_2:hover, 
+            #trophy_3:hover, 
+            #trophy_4:hover, 
+            #trophy_5:hover, 
+            #trophy_6:hover, 
+            #trophy_7:hover, 
+            #trophy_8:hover, 
+            #trophy_9:hover, 
+            #trophy_10:hover, 
+            #trophy_11:hover, 
+            #trophy_12:hover, 
+            #trophy_13:hover, 
+            #trophy_14:hover, 
+            #trophy_15:hover {                
+                cursor: pointer;
+                opacity:1;
+            }
+        </style>
         <rect id="path-1" x="0" y="0" width="1069" height="564" rx="17"></rect>
         <path d="M28.5,1.5 L111.5,1.5" id="path-2"></path>
         <path d="M198.5,1.5 L281.5,1.5" id="path-3"></path>
